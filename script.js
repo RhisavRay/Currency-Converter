@@ -18,9 +18,9 @@ const apiKey = "082b55023331adb8e08c9201";
         select.insertAdjacentHTML("beforeend", `<option value="${curCode}" ${selected}>${curCode}</option>`);
     }
     select.addEventListener("change", () => {
-        const code = select.value
-        const imgTag = select.parentElement.querySelector("img")
-        imgTag.src = `https://flagcdn.com/48x36/${Country_List[code].toLowerCase()}.png`
+        const code = select.value;
+        const imgTag = select.parentElement.querySelector("img");
+        imgTag.src = `https://flagcdn.com/48x36/${Country_List[code].toLowerCase()}.png`;
     });
 });
 
@@ -50,4 +50,14 @@ window.addEventListener("load", getExchangeRate);
 getBtn.addEventListener("click", (e) => {
     e.preventDefault();
     getExchangeRate();
-})
+});
+
+exIcon.addEventListener("click", (e) => {
+    [fromCur.value, toCur.value] = [toCur.value, fromCur.value];
+    [fromCur, toCur].forEach((select) => {
+        const code = select.value;
+        const imgTag = select.parentElement.querySelector("img");
+        imgTag.src = `https://flagcdn.com/48x36/${Country_List[code].toLowerCase()}.png`;
+    })
+    getExchangeRate();
+});
