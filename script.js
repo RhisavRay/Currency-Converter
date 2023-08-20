@@ -7,7 +7,7 @@ const exIcon = document.querySelector("form .reverse");
 const amount = document.querySelector("form input");
 const exRateTxt = document.querySelector("form .result");
 
-const apiKey = 082b55023331adb8e08c9201;
+const apiKey = "082b55023331adb8e08c9201";
 
 // Event listener for currency dropdowns (select)
 
@@ -43,3 +43,7 @@ async function getExchangeRate()
         exRateTxt.innerText = "Something went wrong...";
     }
 }
+
+// Event listeners for button and exchange icon click
+
+window.addEventListener("load", getExchangeRate);
