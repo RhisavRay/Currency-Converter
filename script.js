@@ -18,6 +18,6 @@ const exRateTxt = document.querySelector("form .result");
     select.addEventListener("change", () => {
         const code = select.value
         const imgTag = select.parentElement.querySelector("img")
-        imgTag.src = `https://flagcdn/48x36/${Country_List[code].toLowerCase()}.png`
+        imgTag.src = `https://flagcdn.com/48x36/${Country_List[code].toLowerCase()}.png`
     })
 })
