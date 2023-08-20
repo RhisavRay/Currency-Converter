@@ -38,4 +38,8 @@ async function getExchangeRate()
         const totalExRate = (amount * exchangeRate).toFixed(2);
         exRateTxt.innerText = `${amount.value} ${fromCur.value} = ${totalExRate} ${toCur.value}`
     }
+    catch(error)
+    {
+        exRateTxt.innerText = "Something went wrong...";
+    }
 }
