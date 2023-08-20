@@ -126,3 +126,8 @@ body::after
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+.container .convert-box .select-input:hover
+{
+    border: 1px solid #675AFE;
+}
