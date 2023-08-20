@@ -159,3 +159,5 @@ let Country_List = {
     "ZMK": "ZM",
     "ZWD": "ZW"
 }
+
+export default Country_List;
