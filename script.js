@@ -32,6 +32,6 @@ async function getExchangeRate()
     exRateTxt.innerText = "Gettinf exchange rate...";
     try
     {
-        const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/`)
+        const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCur.value}`)
     }
 }
