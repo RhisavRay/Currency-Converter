@@ -112,3 +112,17 @@ body::after
 {
     width: 100%;
 }
+
+.container .convert-box .select-input
+{
+    display: flex;
+    width: 100%;
+    border: 1px solid #999;
+    height: 40px;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 20px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
