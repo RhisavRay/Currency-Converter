@@ -21,3 +21,14 @@ body
     overflow: hidden;
 }
 
+body::before
+{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #ED2FF0;
+    left: 15%;
+    top: 20%;
+    filter: blur(150px);
+}
