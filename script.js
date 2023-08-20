@@ -29,9 +29,13 @@ const apiKey = 082b55023331adb8e08c9201;
 async function getExchangeRate()
 {
     const amountVal = amount.value || 1;
-    exRateTxt.innerText = "Gettinf exchange rate...";
+    exRateTxt.innerText = "Getting exchange rate...";
     try
     {
         const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCur.value}`)
+        const result = await response.json();
+        const exchangeRate = result.conversion_rates[toCur.value];
+        const totalExRate = (amount * exchangeRate).toFixed(2);
+        exRateTxt.innerText = `${amount.value} ${fromCur.value} = ${totalExRate} ${toCur.value}`
     }
 }
