@@ -89,3 +89,8 @@ body::after
     transition: all 0.3s ease;
 }
 
+.container form input:hover
+{
+    border: 1px solid #675AFE;
+}
+
