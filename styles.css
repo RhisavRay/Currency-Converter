@@ -32,3 +32,16 @@ body::before
     top: 20%;
     filter: blur(150px);
 }
+
+body::after
+{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #22A8CD;
+    left: 80%;
+    top: 74%;
+    filter: blur(150px);
+}
+
