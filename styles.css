@@ -165,3 +165,10 @@ body::after
 {
     color: #675AFE;
 }
+
+.container form .result
+{
+    font-size: 1.1rem;
+    margin: 20px 0 30px;
+}
+
