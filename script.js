@@ -19,5 +19,17 @@ const exRateTxt = document.querySelector("form .result");
         const code = select.value
         const imgTag = select.parentElement.querySelector("img")
         imgTag.src = `https://flagcdn.com/48x36/${Country_List[code].toLowerCase()}.png`
-    })
-})
+    });
+});
+
+// Function to get exchange rate from api
+
+async function getExchangeRate()
+{
+    const amountVal = amount.value || 1;
+    exRateTxt.innerText = "Gettinf exchange rate...";
+    try
+    {
+        const response = await fetch(`https://v6.exchangerate-api.com/v6/[ApiKey]/latest/`)
+    }
+}
