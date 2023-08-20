@@ -7,6 +7,8 @@ const exIcon = document.querySelector("form .reverse");
 const amount = document.querySelector("form input");
 const exRateTxt = document.querySelector("form .result");
 
+const apiKey = 082b55023331adb8e08c9201;
+
 // Event listener for currency dropdowns (select)
 
 [fromCur, toCur].forEach((select, i) => {
@@ -30,6 +32,6 @@ async function getExchangeRate()
     exRateTxt.innerText = "Gettinf exchange rate...";
     try
     {
-        const response = await fetch(`https://v6.exchangerate-api.com/v6/[ApiKey]/latest/`)
+        const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/`)
     }
 }
