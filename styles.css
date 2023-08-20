@@ -131,3 +131,8 @@ body::after
 {
     border: 1px solid #675AFE;
 }
+
+.container .convert-box .select-input img
+{
+    max-width: 20px;
+}
