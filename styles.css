@@ -107,3 +107,8 @@ body::after
     align-items: center;
     justify-content: space-between;
 }
+
+.container form .from, .container form .to
+{
+    width: 100%;
+}
