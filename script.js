@@ -35,7 +35,7 @@ async function getExchangeRate()
         const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCur.value}`)
         const result = await response.json();
         const exchangeRate = result.conversion_rates[toCur.value];
-        const totalExRate = (amount * exchangeRate).toFixed(2);
+        const totalExRate = (amountVal * exchangeRate).toFixed(2);
         exRateTxt.innerText = `${amount.value} ${fromCur.value} = ${totalExRate} ${toCur.value}`
     }
     catch(error)
@@ -47,3 +47,7 @@ async function getExchangeRate()
 // Event listeners for button and exchange icon click
 
 window.addEventListener("load", getExchangeRate);
+getBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    getExchangeRate();
+})
