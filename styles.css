@@ -161,3 +161,7 @@ body::after
     transition: all 0.3s ease;
 }
 
+.container .convert-box .reverse:hover
+{
+    color: #675AFE;
+}
